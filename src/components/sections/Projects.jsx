@@ -1,0 +1,263 @@
+import React from 'react'
+import styled from 'styled-components'
+import { colours} from '../../config';
+import IconGitHub from '../icons/Github';
+import IconFolder from '../icons/Folder';
+import IconExternal from '../icons/External';
+import { ProjectItems } from '../../data';
+
+const StyledProjectsSection = styled.section`
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .archive-link {
+        font-family: 'SFMono';
+        font-size: 14px;
+        &:after {
+            bottom: 0.1em;
+        }
+    }
+    .projects-grid {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 15px;
+        position: relative;
+        margin-top: 50px;
+        
+        @media (max-width: 1080px) {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+    .more-button {
+        color: ${colours.blue};
+        background-color: transparent;
+        border: 1px solid ${colours.blue};
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        font-size: 14px;
+        font-family: 'SFMono';
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: ${colours.greenTint};
+            outline: none;
+        }
+        &:after {
+                display: none !important;
+        }
+        margin: 80px auto 0;
+    }
+`;
+
+const StyledProject = styled.li`
+  position: relative;
+  cursor: default;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover,
+    &:focus-within {
+      .project-inner {
+        transform: translateY(-7px);
+      }
+    }
+  }
+  a {
+    position: relative;
+    z-index: 1;
+  }
+  .project-inner {
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &:hover,
+    &:focus {
+      box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+    }   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: 4px;
+    background-color: ${colours.lightNavy};
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    .folder {
+      color: ${colours.blue};
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .project-links {
+      display: flex;
+      align-items: center;
+      margin-right: -10px;
+      color: ${colours.lightSlate};
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 7px;
+        &.external {
+          svg {
+            width: 22px;
+            height: 22px;
+            margin-top: -4px;
+          }
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  .project-title {
+    margin: 0 0 10px;
+    color: ${colours.lightestSlate};
+    font-size: 22px;
+    a {
+      position: static;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .project-description {
+    color: ${colours.lightSlate};
+    font-size: 17px;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        position: relative;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        color: ${colours.blue};
+        &:hover,
+        &:focus,
+        &:active {
+        color: ${colours.blue};
+        outline: 0;
+        &:after {
+            width: 100%;
+        }
+        & > * {
+            color: ${colours.blue} !important;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        }
+        &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        position: relative;
+        bottom: 0.37em;
+        background-color: ${colours.blue};
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        opacity: 0.5;
+        }
+    }
+  }
+  .project-tech-list {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 20px 0 0 0;
+    list-style: none;
+    li {
+      font-family: 'SFMono';
+      font-size: 12px;
+      line-height: 1.75;
+      &:not(:last-of-type) {
+        margin-right: 15px;
+      }
+    }
+  }
+`;
+
+const Projects = () => {
+    return (
+        <StyledProjectsSection id="projects">
+            <h2 className='numbered-heading'>My Projects</h2>
+            
+            <ul className='projects-grid'>
+            { ProjectItems.map(item => (
+                <StyledProject >
+                    <div className='project-inner'>
+                        <header>
+                            <div className="project-top">
+                                <div className="folder">
+                                    < IconFolder />
+                                </div>
+                                <div className="project-links">
+                                    <a href={item.url} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                                        <IconGitHub />
+                                    </a>
+                                    <a
+                                        href={item.url}
+                                        aria-label="External Link"
+                                        className="external"
+                                        target="_blank"
+                                        rel="noreferrer">
+                                        <IconExternal />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h3 className="project-title">
+                                <a href={item.url} target="_blank" rel="noreferrer">
+                                    {item.title}
+                                </a>
+                            </h3>
+
+                            <div className="project-description" >
+                                {item.desc}
+                            </div>
+                        </header>
+                        <footer>
+                            <ul className="project-tech-list">
+                              <li>{item.techOne}</li>   
+                              <li>{item.techTwo}</li>
+                              <li>{item.techThree}</li>
+                            </ul>
+                        </footer>
+                    </div>
+                </StyledProject>
+                ))}
+            </ul>
+            
+        </StyledProjectsSection>
+    )
+}
+
+export default Projects
