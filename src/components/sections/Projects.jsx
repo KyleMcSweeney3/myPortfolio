@@ -198,6 +198,7 @@ const StyledProject = styled.li`
       font-family: 'SFMono';
       font-size: 12px;
       line-height: 1.75;
+      color: ${colours.blue} !important;
       &:not(:last-of-type) {
         margin-right: 15px;
       }

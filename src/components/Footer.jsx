@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colours, github } from '../config';
+import { colours, github, linkedIn, instagram } from '../config';
 import IconGitHub from './icons/Github';
 import IconLinkedin from './icons/LinkedIn';
 import IconInstagram from './icons/Instagram'
@@ -64,17 +64,17 @@ const Footer = () => {
             <StyledSocialLinks>
                 <ul>
                     <li>
-                        <a href = "/">
+                        <a href = { github }>
                             <IconGitHub />
                         </a>
                     </li>
                     <li>
-                        <a href = "/">
+                        <a href =  { linkedIn }>
                             <IconLinkedin />
                         </a>
                     </li>
                     <li>
-                        <a href = "/">
+                        <a href = { instagram }>
                             <IconInstagram />
                         </a>
                     </li>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <br></br>
                 <a href = "https://brittanychiang.com/">
                     <div>
-                        Design by Brittany Chieng.
+                        Design by Brittany Chiang.
                     </div>
                 </a>
             </StyledCredit>

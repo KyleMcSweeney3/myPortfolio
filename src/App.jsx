@@ -23,7 +23,7 @@ function App() {
         <StyledMainContainer className="fillHeight">
         <Hero />
         <About />
-        <Experience />
+        {/* <Experience /> */}
         <Projects />
         <Contact />
         <Footer />
