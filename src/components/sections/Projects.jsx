@@ -128,6 +128,9 @@ const StyledProject = styled.li`
         svg {
           width: 20px;
           height: 20px;
+          &:hover {
+            color: ${colours.blue};
+          }
         }
       }
     }
