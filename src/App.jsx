@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import GlobalStyle from './globalstyles';
 import Projects from './components/sections/Projects';
 import Social from './components/Social';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -21,12 +22,13 @@ function App() {
         <Navbar />
         <Social />
         <StyledMainContainer className="fillHeight">
-        <Hero />
-        <About />
-        {/* <Experience /> */}
-        <Projects />
-        <Contact />
-        <Footer />
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<><Hero /><About /><Projects /><Contact /></>}/>
+            <Route exact path="/test" element={<Hero />}/>
+          </Routes>
+        </Router>
+        <Footer />  
       </StyledMainContainer>
     </>
   )

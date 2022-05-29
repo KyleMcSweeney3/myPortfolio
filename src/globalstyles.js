@@ -173,7 +173,7 @@ const GlobalStyle = createGlobalStyle`
     &:focus {
       color: ${colours.blue}
     }
-    
+
     &.inline-link {
         display: inline-block;
         text-decoration: none;
@@ -207,7 +207,6 @@ const GlobalStyle = createGlobalStyle`
         }
     }
   }
-
 `;
  
 export default GlobalStyle;

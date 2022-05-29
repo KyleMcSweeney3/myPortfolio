@@ -61,6 +61,7 @@ const StyledNav = styled.nav`
 const StyledLinks = styled.div`
     display: flex;
     align-items: center;
+    color: ${colours.lightestSlate};
 
     @media (max-width: 768px) {
         display: none;

@@ -216,7 +216,7 @@ const Projects = () => {
             
             <ul className='projects-grid'>
             { ProjectItems.map(item => (
-                <StyledProject >
+                <StyledProject key={item.id}>
                     <div className='project-inner'>
                         <header>
                             <div className="project-top">
@@ -224,11 +224,11 @@ const Projects = () => {
                                     < IconFolder />
                                 </div>
                                 <div className="project-links">
-                                    <a href={item.url} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                                    <a href={item.githubURL} aria-label="GitHub Link" target="_blank" rel="noreferrer">
                                         <IconGitHub />
                                     </a>
                                     <a
-                                        href={item.url}
+                                        href={item.externalURL ? item.externalURL : item.githubURL}
                                         aria-label="External Link"
                                         className="external"
                                         target="_blank"
@@ -239,7 +239,7 @@ const Projects = () => {
                             </div>
 
                             <h3 className="project-title">
-                                <a href={item.url} target="_blank" rel="noreferrer">
+                                <a href={item.githubURL} target="_blank" rel="noreferrer">
                                     {item.title}
                                 </a>
                             </h3>

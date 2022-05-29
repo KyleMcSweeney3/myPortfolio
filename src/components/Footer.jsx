@@ -86,12 +86,6 @@ const Footer = () => {
                         Developed by Kyle McSweeney 2022.
                     </div>
                 </a>
-                <br></br>
-                <a href = "https://brittanychiang.com/">
-                    <div>
-                        Design by Brittany Chiang.
-                    </div>
-                </a>
             </StyledCredit>
         </StyledFooter>
     )

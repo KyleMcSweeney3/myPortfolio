@@ -60,23 +60,29 @@ const StyledHeroSection = styled.section`
             outline: none;
         }
         &:after {
-        display: none !important;
+            display: none !important;
         }
-        margin-top: 50px;
+        margin-top: 40px;
     }
 `;
+
+const JobTitle = styled.span`
+    color: ${colours.blue};
+    text-decoration: underline;
+`
 
 const Hero = () => {
 
     const one = <h1>Hey There! I'm</h1>;
     const two = <h2 className="big-heading">Kyle McSweeney.</h2>;
-    const three = <h3 className="big-heading">I love to build software!</h3>;
+    const three = <h3 className="big-heading">  </h3>;
     const four = (
         <>
         <p>
             I’m a software engineer specializing in Full 
             stack Development. I enjoy solving problems with clean, scalable solutions.
-            I love designing and developing games, primarily using Unreal Engine 5.
+            I love designing and developing games, primarily using Unreal Engine 5. I'm currently working
+            as a <JobTitle>Solutions Engineer</JobTitle> at Zip Co.
         </p>
         </>
     );
