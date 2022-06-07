@@ -34,6 +34,15 @@ const StyledText = styled.div`
         font-size: 14px;
         color: ${colours.slate};
 
+        &:before {
+        content: '»';
+        position: absolute;
+        margin-top: 2px;
+        left: 0;
+        color: ${colours.blue};
+        font-size: 14px;
+        line-height: 12px;
+      }
       }
     }
 `;
@@ -112,10 +121,7 @@ const About = () => {
                 <StyledText>
                     <div>
                         <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            Hey there! My name's Kyle and I'm a Software/Solutions Engineer currently based in Sydney, Australia.
                         </p>
                         <p>
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -123,7 +129,16 @@ const About = () => {
                             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
                             sunt in culpa qui officia deserunt mollit anim id est laborum."
                         </p>
+                        <p>Take a look at some of the languages and tools i've been using recently: </p>
                     </div>
+                    <ul className="skills-list">
+                      <li>Javascript</li>
+                      <li>React</li>
+                      <li>Node.js</li>
+                      <li>Unreal Engine 5</li>
+                      <li>Python</li>
+                      <li>Discord.js</li>
+                    </ul>
                 </StyledText>
                 <StyledPic>
                     <div className="wrapper">

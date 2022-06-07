@@ -64,17 +64,17 @@ const Footer = () => {
             <StyledSocialLinks>
                 <ul>
                     <li>
-                        <a href = { github }>
+                        <a href = { github } target="_blank">
                             <IconGitHub />
                         </a>
                     </li>
                     <li>
-                        <a href =  { linkedIn }>
+                        <a href =  { linkedIn } target="_blank">
                             <IconLinkedin />
                         </a>
                     </li>
                     <li>
-                        <a href = { instagram }>
+                        <a href = { instagram } target="_blank">
                             <IconInstagram />
                         </a>
                     </li>

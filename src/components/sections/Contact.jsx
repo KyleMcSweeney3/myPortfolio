@@ -62,8 +62,8 @@ const Contact = () => {
             <h2 className="title">Get In Touch</h2>
 
             <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Whether you're just up for a chat, have any questions, or want to talk about a new opportunity, my email is always open. Feel free to 
+              send across an email and I'll be sure to get back to you!
             </p>
             <a className="email-link" href={`mailto:${email}`}>
                 Say Hello! 👋  

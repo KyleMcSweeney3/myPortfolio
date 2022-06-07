@@ -24,7 +24,7 @@ function App() {
         <StyledMainContainer className="fillHeight">
         <Router>
           <Routes>
-            <Route exact path="/" element={<><Hero /><About /><Projects /><Contact /></>}/>
+            <Route exact path="/" element={<><Hero /><About /><Experience /><Projects /><Contact /></>}/>
             <Route exact path="/test" element={<Hero />}/>
           </Routes>
         </Router>

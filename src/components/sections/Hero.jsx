@@ -66,9 +66,17 @@ const StyledHeroSection = styled.section`
     }
 `;
 
-const JobTitle = styled.span`
+const JobTitle = styled.a`
     color: ${colours.blue};
-    text-decoration: underline;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    &:hover, &:focus {
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:after {
+         width: 100%;
+        }
+    }
 `
 
 const Hero = () => {
@@ -82,7 +90,7 @@ const Hero = () => {
             I’m a software engineer specializing in Full 
             stack Development. I enjoy solving problems with clean, scalable solutions.
             I love designing and developing games, primarily using Unreal Engine 5. I'm currently working
-            as a <JobTitle>Solutions Engineer</JobTitle> at Zip Co.
+            as a <JobTitle href = "https://zip.co/au" target="_blank">Solutions Engineer at Zip Co.</JobTitle> 
         </p>
         </>
     );

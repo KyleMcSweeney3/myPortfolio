@@ -17,35 +17,35 @@ export const ProjectItems = [
         techTwo: "Node.js",
         techThree: "PokeAPI"
     },
+    // {
+    //     id: 3,
+    //     githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
+    //     title: "Pokedex Discord Bot",
+    //     desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
+    //     techOne: "Discord.js",
+    //     techTwo: "Node.js",
+    //     techThree: "PokeAPI"
+    // },
+    // {
+    //     id: 4,
+    //     githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
+    //     title: "Pokedex Discord Bot",
+    //     desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
+    //     techOne: "Discord.js",
+    //     techTwo: "Node.js",
+    //     techThree: "PokeAPI"
+    // },
+    // {
+    //     id: 5,
+    //     githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
+    //     title: "Pokedex Discord Bot",
+    //     desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
+    //     techOne: "Discord.js",
+    //     techTwo: "Node.js",
+    //     techThree: "PokeAPI"
+    // },
     {
         id: 3,
-        githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
-        title: "Pokedex Discord Bot",
-        desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
-        techOne: "Discord.js",
-        techTwo: "Node.js",
-        techThree: "PokeAPI"
-    },
-    {
-        id: 4,
-        githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
-        title: "Pokedex Discord Bot",
-        desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
-        techOne: "Discord.js",
-        techTwo: "Node.js",
-        techThree: "PokeAPI"
-    },
-    {
-        id: 5,
-        githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
-        title: "Pokedex Discord Bot",
-        desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
-        techOne: "Discord.js",
-        techTwo: "Node.js",
-        techThree: "PokeAPI"
-    },
-    {
-        id: 6,
         githubURL: "https://github.com/KyleMcSweeney3/PokemonLikeGame",
         externalURL: "https://pokemon-like-game.netlify.app/",
         title: "Pokemon Like 2D Game",
