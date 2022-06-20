@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colours, github } from '../../config'
+import { colours, github, linkedIn } from '../../config'
 
 const StyledHeroSection = styled.section`
     display: flex;
@@ -52,6 +52,7 @@ const StyledHeroSection = styled.section`
         line-height: 1;
         text-decoration: none;
         cursor: pointer;
+        margin-right: 20px;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
         &:hover,
         &:focus,
@@ -87,21 +88,29 @@ const Hero = () => {
     const four = (
         <>
         <p>
-            I’m a software engineer specializing in Full 
-            stack Development. I enjoy solving problems with clean, scalable solutions.
-            I love designing and developing games, primarily using Unreal Engine 5. I'm currently working
-            as a <JobTitle href = "https://zip.co/au" target="_blank">Solutions Engineer at Zip Co.</JobTitle> 
+            I’m a Software/Solutions engineer specialising in designing, building, and implementing clean, reliable, and scalable technical solutions.
+            I'm currently working
+            as an <JobTitle href = "https://zip.co/au" target="_blank">Enterprise Solutions Engineer at Zip Co.</JobTitle> 
         </p>
         </>
     );
     const five = (
+        <>
         <a
         className="email-link"
         href={github}
         target="_blank"
         rel="noreferrer">
-        Check out my github!
+        Check out my <strong>Github!</strong>
         </a>
+        <a
+        className="email-link"
+        href={linkedIn}
+        target="_blank"
+        rel="noreferrer">
+        Check out my <strong>LinkedIn!</strong>
+        </a>
+        </>
     );
 
     const items = [one, two, three, four, five]

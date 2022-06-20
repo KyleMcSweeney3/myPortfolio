@@ -42,7 +42,7 @@ const StyledText = styled.div`
         color: ${colours.blue};
         font-size: 14px;
         line-height: 12px;
-      }
+        }
       }
     }
 `;

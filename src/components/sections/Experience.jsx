@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { colours } from '../../config';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
+import Typography from '@mui/material/Typography';
 
 const StyledExperienceSection = styled.section`
-    /* max-width: 700px; */
+    max-width: 900px;
 
     .inner {
         display: flex;
+        color: ${colours.lightSlate};
+
         @media (max-width: 600px) {
             display: block;
         }
@@ -17,129 +24,129 @@ const StyledExperienceSection = styled.section`
 `;
 
 const StyledList = styled.div`
-    position: relative;
-    z-index: 3;
-    width: max-content;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    ul.skills-list {
+      display: grid;
+      grid-gap: 0 10px;
+      padding: 0;
+      margin: 20px 0 0 0;
+      overflow: hidden;
+      list-style: none;
+      
 
-    @media (max-width: 600px) {
-        display: flex;
-        overflow-x: auto;
-        width: calc(100% + 100px);
-        padding-left: 50px;
-        margin-left: -50px;
-        margin-bottom: 30px;
-    }
-    @media (max-width: 480px) {
-        width: calc(100% + 50px);
-        padding-left: 25px;
-        margin-left: -25px;
-    }
-
-    li {
-        &:first-of-type {
-        @media (max-width: 600px) {
-            margin-left: 50px;
-        }
-        @media (max-width: 480px) {
-            margin-left: 25px;
-        }
-        }
-        &:last-of-type {
-        @media (max-width: 600px) {
-            padding-right: 50px;
-        }
-        @media (max-width: 480px) {
-            padding-right: 25px;
-        }
-        }
-    }
-`;
-
-const StyledTabButton = styled.div`
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    &:hover,
-    &:active,
-    &:focus {
-      color: ${colours.blue};
-      outline: 0;
-    }
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 42px;
-    padding: 0 20px 2px;
-    border-left: 2px solid ${colours.lightestNavy};
-    background-color: transparent;
-    /* color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')}; */
-    font-family: 'SFMono';
-    font-size: 14px;
-    text-align: left;
-    white-space: nowrap;
-
-    &:hover,
-    &:focus {
-        background-color: ${colours.lightNavy};
-        cursor: pointer;
-    }
-`;
-
-const StyledTabPanels = styled.div`
-    position: relative;
-    width: 100%;
-    margin-left: 20px;
-    @media (max-width: 600px) {
-        margin-left: 0;
-    }
-`;
-
-const StyledTabPanel = styled.div`
-    width: 100%;
-    height: auto;
-    padding: 10px 5px;
-
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        font-size: 18px;
-        li {
+      li {
         position: relative;
-        padding-left: 30px;
         margin-bottom: 10px;
-        &:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: ${colours.blue}
-        }
-        }
-    }
+        padding-left: 20px;
+        font-family: 'SFMono';
+        font-size: 14px;
+        color: ${colours.slate};
 
-    h3 {
-        margin-bottom: 2px;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 1.3;
-        .company {
-            color: ${colours.blue}
+        &:before {
+        content: '•';
+        position: absolute;
+        margin-top: 4px;
+        left: 0;
+        color: ${colours.blue};
+        font-size: 14px;
+        line-height: 12px;
         }
+      }
     }
 `
 
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+  
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`vertical-tabpanel-${index}`}
+        aria-labelledby={`vertical-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+}
+
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+  }
+
 const Experience = () => {
+    const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
     return (
         <StyledExperienceSection id="experience">
             <h2 className="numbered-heading">Skills & Experience</h2>
             <div className="inner">
-                
+                <Box>
+                    <Tabs variant="scrollable" onChange={handleChange} value={value}>
+                        <Tab label="Programming Languages" {...a11yProps(0)} style={{color: `${colours.lightSlate}`, textTransform: 'capitalize'}} className='tab'></Tab>
+                        <Tab label="Libraries and Frameworks" {...a11yProps(1)} style={{color: `${colours.lightSlate}`, textTransform: 'capitalize'}}></Tab>
+                        <Tab label="Tools and Platforms" {...a11yProps(2)} style={{color: `${colours.lightSlate}`, textTransform: 'capitalize'}}></Tab>
+                    </Tabs>
+                    <TabPanel value={value} index={0} style={{padding: '0 !important'}}>
+                        <StyledList>
+                            <ul className="skills-list">
+                                <li>Javascript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Python</li>
+                                <li>C++</li>
+                                <li>GraphQL</li>
+                                <li>SQL</li>
+                            </ul>
+                        </StyledList>
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                        <StyledList>
+                            <ul className="skills-list">
+                                <li>React/React Native</li>
+                                <li>Node.js</li>
+                                <li>Discord.js</li>
+                                <li>Commerce.js</li>
+                                <li>Stripe.js</li>
+                                <li>Jest</li>
+                                <li>Express</li>
+                                <li>Numpy</li>
+                                <li>Beautiful Soup</li>
+                            </ul>
+                        </StyledList>
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                        <StyledList>
+                            <ul className="skills-list">
+                                <li>Git/Github</li>
+                                <li>AWS [S3, Route53, Amplify]</li>
+                                <li>Commerce.js</li>
+                                <li>MySQL</li>
+                                <li>Shopify</li>
+                                <li>Wordpress</li>
+                                <li>Netlify</li>
+                                <li>Unreal Engine 4 and 5</li>
+                            </ul>
+                        </StyledList>
+                    </TabPanel>
+                </Box>
             </div>
         </StyledExperienceSection>
     )

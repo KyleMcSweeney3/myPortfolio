@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { colours } from '../config'
 import Menu from './Menu';
 import logo from '../images/KMLogo.png';
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
     display: flex;
@@ -127,7 +128,7 @@ const Navbar = () => {
 
     const Logo = (
         <div className="logo" tabIndex="-1">
-            <a href="/" aria-label="home">
+            <a href="/#" aria-label="home">
               {/* <IconLogo /> */}
               <h1>KM</h1>
               {/* <img src={logo} alt="loading..." style={{width: '100px !important'}}/> */}
