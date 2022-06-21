@@ -112,6 +112,19 @@ const StyledPic = styled.div`
   }
 `;
 
+const JobTitle = styled.a`
+    color: ${colours.blue};
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    &:hover, &:focus {
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:after {
+         width: 100%;
+        }
+    }
+`
+
 
 const About = () => {
     return (
@@ -124,10 +137,13 @@ const About = () => {
                             Hey there! My name's Kyle and I'm a Software/Solutions Engineer currently based in Sydney, Australia.
                         </p>
                         <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            I started programming as I began my Computer Science degree at University, and since then I've been hooked on designing and building software products 
+                            from simple snake games to fully functional ecommerce websites.
+                        </p>
+                        <p>
+                            I currently have the privilege of working at <JobTitle href = "https://zip.co/au" target="_blank">Zip Co</JobTitle>, helping enterprise businesses leverage Buy now - pay later and ecommerce technology 
+                            to offer seamless payments to millions of customers across the globe. Each day I work with multiple internal and external teams to design, 
+                            build, and deliver tailored best-fit solutions to our partners.
                         </p>
                         <p>Take a look at some of the languages and tools i've been using recently: </p>
                     </div>

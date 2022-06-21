@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { colours } from '../config'
 import Menu from './Menu';
-import logo from '../images/KMLogo.png';
-import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
     display: flex;
@@ -136,11 +134,11 @@ const Navbar = () => {
         </div>
     );
 
-    const ResumeLink = (
-        <a className="resume-button" href="https://docs.google.com/document/d/1EYKz4MXVChuZJ2wK7UPmos60_zgKPpQIh3znKieEgH4/edit" target="_blank" rel="noopener noreferrer">
-          Resume
-        </a>
-      );
+    // const ResumeLink = (
+    //     <a className="resume-button" href="https://docs.google.com/document/d/1EYKz4MXVChuZJ2wK7UPmos60_zgKPpQIh3znKieEgH4/edit" target="_blank" rel="noopener noreferrer">
+    //       Resume
+    //     </a>
+    //   );
 
     return (
         <StyledHeader>

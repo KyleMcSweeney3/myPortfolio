@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 
 const StyledExperienceSection = styled.section`
     max-width: 900px;
+    height: 600px;
 
     .inner {
         display: flex;

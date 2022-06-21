@@ -40,7 +40,7 @@ export const ProjectItems = [
         id: 5,
         githubURL: "https://github.com/KyleMcSweeney3/myPortfolio",
         title: "My Portfolio Website",
-        desc: "Github Repo for my portfolio site, which you are currently viewing.",
+        desc: "Github Repo for my portfolio site, built using React and hosted via AWS.",
         techOne: "ReactJS",
         techTwo: "Node.js",
         techThree: "React Hooks"
