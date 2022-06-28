@@ -138,7 +138,7 @@ const About = () => {
                         </p>
                         <p>
                             I started programming as I began my Computer Science degree at University, and since then I've been hooked on designing and building software products 
-                            from simple snake games to fully functional ecommerce websites.
+                            from simple games to fully functional ecommerce websites.
                         </p>
                         <p>
                             I currently have the privilege of working at <JobTitle href = "https://zip.co/au" target="_blank">Zip Co</JobTitle>, helping enterprise businesses leverage Buy now - pay later and ecommerce technology 
