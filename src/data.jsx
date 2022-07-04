@@ -45,13 +45,13 @@ export const ProjectItems = [
         techTwo: "Node.js",
         techThree: "React Hooks"
     },
-    // {
-    //     id: 5,
-    //     githubURL: "https://github.com/KyleMcSweeney3/pokemon-discord-bot",
-    //     title: "Pokedex Discord Bot",
-    //     desc: "The Pokedex discord bot utilises the PokeAPI to pull and display information about the many entities within the Pokemon universe.",
-    //     techOne: "Discord.js",
-    //     techTwo: "Node.js",
-    //     techThree: "PokeAPI"
-    // },
+    {
+        id: 6,
+        githubURL: "https://github.com/KyleMcSweeney3/eCommerce-API",
+        title: "eCommerce API",
+        desc: "An API built to facilite payments for eCommerce software. Includes creation of a transaction, charging and refunding.",
+        techOne: "Python",
+        techTwo: "Flask",
+        techThree: "SQLite"
+    },
 ]

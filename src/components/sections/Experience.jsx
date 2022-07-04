@@ -130,6 +130,7 @@ const Experience = () => {
                                 <li>Express</li>
                                 <li>Numpy</li>
                                 <li>Beautiful Soup</li>
+                                <li>Flask</li>
                             </ul>
                         </StyledList>
                     </TabPanel>

@@ -12,12 +12,12 @@ const StyledContactSection = styled.section`
     }
 
     .overline {
-    display: block;
-    margin-bottom: 20px;
-    color: ${colours.blue};
-    font-family: 'SFMono';
-    font-size: 16px;
-    font-weight: 400;
+      display: block;
+      margin-bottom: 20px;
+      color: ${colours.blue};
+      font-family: 'SFMono';
+      font-size: 16px;
+      font-weight: 400;
     &:before {
       bottom: 0;
       font-size: 14px;
