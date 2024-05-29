@@ -90,7 +90,7 @@ const Hero = () => {
         <p>
             I’m a Software/Solutions engineer specialising in designing, building, and implementing clean, reliable, and scalable technical solutions.
             I'm currently working
-            as an <JobTitle href = "https://zip.co/au" target="_blank">Enterprise Solutions Engineer at Zip Co.</JobTitle> 
+            as a <JobTitle href = "https://www.linkedin.com/in/kyle-mcsweeney3/" target="_blank">Senior Software Engineer at Commonwealth Bank.</JobTitle> 
         </p>
         </>
     );
