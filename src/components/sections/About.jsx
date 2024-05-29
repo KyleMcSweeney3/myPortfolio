@@ -141,8 +141,8 @@ const About = () => {
                             from simple games to fully functional ecommerce websites.
                         </p>
                         <p>
-                            I currently have the privilege of working at <JobTitle href = "https://zip.co/au" target="_blank">Zip Co</JobTitle>, helping enterprise businesses leverage Buy now - pay later and ecommerce technology 
-                            to offer seamless payments to millions of customers across the globe. Each day I work with multiple internal and external teams to design, 
+                            I currently have the privilege of working at <JobTitle href = "https://www.commbank.com.au/" target="_blank">Commonwealth Bank</JobTitle>, helping businesses leverage payment orchestration, anti-fraud tools, and ecommerce technology 
+                            to offer seamless payments to theirs millions of customers across the globe. Each day I work with multiple internal and external teams to design, 
                             build, and deliver tailored best-fit solutions to our partners.
                         </p>
                         <p>Take a look at some of the languages and tools i've been using recently: </p>
